@@ -1,0 +1,14 @@
+with friend_salary (Friend_ID, Salary) as
+                (select f.Friend_ID, p.Salary from Friends f
+                 join Packages p 
+                 on f.Friend_ID=p.ID)
+                 
+-- select s.Name 
+-- from Students s
+-- join Packages p
+-- on s.ID = p.ID
+-- join friend_salary fs
+-- on s.ID = fs.Friend_ID                
+-- where p.Salary < fs.Salary;
+
+select * from  friend_salary
